@@ -153,7 +153,7 @@ def main():
     )
 
     train_dataset = raw_datasets["train"]
-    eval_dataset = raw_datasets["test"]
+    eval_dataset = None #raw_datasets["test"]
 
     with training_args.main_process_first(desc="Log a few random samples from the processed training set"):
         for index in random.sample(range(len(raw_datasets["train"])), 3):
